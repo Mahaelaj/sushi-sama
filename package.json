@@ -1,0 +1,19 @@
+{
+  "name": "sushi-sama",
+  "version": "1.0.0",
+  "description": "The Sushi Sama Game",
+  "main": "SushiSama.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mahaelaj/sushi-sama.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mahaelaj/sushi-sama/issues"
+  },
+  "homepage": "https://github.com/Mahaelaj/sushi-sama#readme"
+}
