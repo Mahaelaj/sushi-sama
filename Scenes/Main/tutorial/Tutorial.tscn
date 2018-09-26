@@ -1,0 +1,86 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/Main/tutorial/Tutorial.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Main/tutorial/tutorial-card2.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Main/tutorial/tutorial-card1.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Main/tutorial/next-button.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Main/tutorial/next-button-pressed.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Main/tutorial/next-button-arrow.png" type="Texture" id=6]
+[ext_resource path="res://sound/menu-button.wav" type="AudioStream" id=7]
+
+[node name="Tutorial" type="Node2D" index="0"]
+
+pause_mode = 2
+visible = false
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause", "Transform" ]
+
+[node name="TutorialCard2" type="Sprite" parent="." index="0"]
+
+scale = Vector2( 0.516082, 0.516082 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Pause", "Transform", "Visibility" ]
+
+[node name="TutorialCard1" type="Sprite" parent="." index="1"]
+
+scale = Vector2( 0.516082, 0.516082 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="TextureButton" type="TextureButton" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 110.0
+margin_top = -193.0
+margin_right = 522.0
+margin_bottom = -5.0
+rect_scale = Vector2( 0.2, 0.2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="NextButtonArrow" type="Sprite" parent="." index="3"]
+
+position = Vector2( 151, -174 )
+scale = Vector2( 0.213054, 0.213054 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="ArrowTween" type="Tween" parent="." index="4"]
+
+repeat = true
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = true
+playback/speed = 1.0
+_sections_unfolded = [ "playback" ]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="5"]
+
+stream = ExtResource( 7 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[connection signal="button_up" from="TextureButton" to="." method="_on_TextureButton_button_up"]
+
+

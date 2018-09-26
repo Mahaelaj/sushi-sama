@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://sharedScripts/MouthItem.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Main/mouthPool/mouth/mouth-top.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Main/mouthPool/mouth/mouth-bottom.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Main/mouthPool/mouth/mouth-teeth.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 6.38065, 83.6436 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 55.1487, 114.358 )
+
+[node name="Mouth" type="KinematicBody2D" groups=[
+"mouths",
+]]
+
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
+x = 900
+yMin = 0
+yMax = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+
+position = Vector2( 81.805, 3.29406 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="MouthTop" type="Sprite" parent="." index="1"]
+
+position = Vector2( 0, -3.99997 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Visibility", "Z Index" ]
+
+[node name="MouthBottom" type="Sprite" parent="." index="2"]
+
+position = Vector2( 0, -3.99997 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Area2D" type="Area2D" parent="." index="3"]
+
+position = Vector2( 0, 10 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitorable = false
+collision_layer = 0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+
+position = Vector2( -80.0407, -14.1928 )
+shape = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="." index="4"]
+
+process_mode = 1
+wait_time = 1.5
+one_shot = true
+autostart = false
+
+[node name="MouthTeeth" type="Sprite" parent="." index="5"]
+
+position = Vector2( 0, -3.99997 )
+scale = Vector2( 0.6, 0.6 )
+z_index = 3
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+

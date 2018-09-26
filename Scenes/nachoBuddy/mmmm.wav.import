@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/mmmm.wav-38112b7f2022e529832be0f49b0aa6fc.sample"
+
+[deps]
+
+source_file="res://Scenes/nachoBuddy/mmmm.wav"
+dest_files=[ "res://.import/mmmm.wav-38112b7f2022e529832be0f49b0aa6fc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

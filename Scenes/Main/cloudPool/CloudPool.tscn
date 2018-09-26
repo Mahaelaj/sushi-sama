@@ -1,0 +1,240 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://CloudPool.gd" type="Script" id=1]
+[ext_resource path="res://sharedScripts/CloudSetItem.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Main/cloudPool/cloud1.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Main/cloudPool/cloud2.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Main/cloudPool/cat-cloud.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Main/cloudPool/cloud3.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Main/cloudPool/skull-cloud.png" type="Texture" id=7]
+[ext_resource path="res://Scenes/Main/cloudPool/guitar.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/Main/cloudPool/unicorn-cloud.png" type="Texture" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 410, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 410, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 410, 10 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 410, 10 )
+
+[node name="CloudPool" type="Node2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CloudSet1" type="KinematicBody2D" parent="." index="0" groups=[
+"clouds",
+]]
+
+editor/display_folded = true
+position = Vector2( 803, 0 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+collision/safe_margin = 0.08
+script = ExtResource( 2 )
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
+x = 803
+yMin = 0
+yMax = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CloudSet1" index="0"]
+
+position = Vector2( 390, 250 )
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="cloud1" type="Sprite" parent="CloudSet1" index="1"]
+
+position = Vector2( 131.703, 76.632 )
+scale = Vector2( 0.243923, 0.243923 )
+texture = ExtResource( 3 )
+
+[node name="cloud2" type="Sprite" parent="CloudSet1" index="2"]
+
+position = Vector2( 134.942, 336.651 )
+scale = Vector2( 0.203611, 0.203611 )
+texture = ExtResource( 4 )
+
+[node name="cat-cloud" type="Sprite" parent="CloudSet1" index="3"]
+
+position = Vector2( 435, 270 )
+scale = Vector2( 0.48041, 0.48041 )
+texture = ExtResource( 5 )
+
+[node name="cloud3" type="Sprite" parent="CloudSet1" index="4"]
+
+position = Vector2( 690.501, 100.004 )
+scale = Vector2( 0.21087, 0.21087 )
+texture = ExtResource( 6 )
+
+[node name="cloud4" type="Sprite" parent="CloudSet1" index="5"]
+
+position = Vector2( 700, 460 )
+scale = Vector2( 0.216417, 0.216417 )
+texture = ExtResource( 4 )
+
+[node name="CloudSet2" type="KinematicBody2D" parent="." index="1" groups=[
+"clouds",
+]]
+
+editor/display_folded = true
+position = Vector2( 803, 0 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+collision/safe_margin = 0.08
+script = ExtResource( 2 )
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
+x = 803
+yMin = 0
+yMax = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CloudSet2" index="0"]
+
+position = Vector2( 390, 240 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="skull-cloud" type="Sprite" parent="CloudSet2" index="1"]
+
+position = Vector2( 419.28, 217.239 )
+scale = Vector2( 0.496235, 0.496235 )
+texture = ExtResource( 7 )
+
+[node name="cloud3" type="Sprite" parent="CloudSet2" index="2"]
+
+position = Vector2( 110.123, 410.59 )
+scale = Vector2( 0.217437, 0.217437 )
+texture = ExtResource( 6 )
+
+[node name="cloud1" type="Sprite" parent="CloudSet2" index="3"]
+
+position = Vector2( 677.353, 101.359 )
+scale = Vector2( 0.271395, 0.271395 )
+texture = ExtResource( 3 )
+
+[node name="cloud4" type="Sprite" parent="CloudSet2" index="4"]
+
+position = Vector2( 670, 450 )
+scale = Vector2( 0.271395, 0.271395 )
+texture = ExtResource( 4 )
+
+[node name="cloud2" type="Sprite" parent="CloudSet2" index="5"]
+
+position = Vector2( 130, 20 )
+scale = Vector2( 0.291473, 0.291473 )
+texture = ExtResource( 3 )
+
+[node name="CloudSet3" type="KinematicBody2D" parent="." index="2" groups=[
+"clouds",
+]]
+
+editor/display_folded = true
+position = Vector2( 803, 0 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+collision/safe_margin = 0.08
+script = ExtResource( 2 )
+_sections_unfolded = [ "Collision" ]
+x = 903
+yMin = 0
+yMax = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CloudSet3" index="0"]
+
+position = Vector2( 390, 240 )
+shape = SubResource( 3 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="guitar" type="Sprite" parent="CloudSet3" index="1"]
+
+position = Vector2( 386.433, 239.568 )
+scale = Vector2( 0.579716, 0.579716 )
+texture = ExtResource( 8 )
+
+[node name="cloud1" type="Sprite" parent="CloudSet3" index="2"]
+
+position = Vector2( 700, 450 )
+scale = Vector2( 0.242116, 0.242116 )
+texture = ExtResource( 3 )
+
+[node name="cloud3" type="Sprite" parent="CloudSet3" index="3"]
+
+position = Vector2( 110, 430 )
+scale = Vector2( 0.239189, 0.239189 )
+texture = ExtResource( 6 )
+
+[node name="cloud2" type="Sprite" parent="CloudSet3" index="4"]
+
+position = Vector2( 540, 30 )
+scale = Vector2( 0.203768, 0.203768 )
+texture = ExtResource( 4 )
+
+[node name="cloud4" type="Sprite" parent="CloudSet3" index="5"]
+
+position = Vector2( 140, -20 )
+scale = Vector2( 0.31345, 0.31345 )
+texture = ExtResource( 3 )
+
+[node name="CloudSet4" type="KinematicBody2D" parent="." index="3" groups=[
+"clouds",
+]]
+
+editor/display_folded = true
+position = Vector2( 803, 0 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+collision/safe_margin = 0.08
+script = ExtResource( 2 )
+_sections_unfolded = [ "Collision", "Transform" ]
+x = 803
+yMin = 0
+yMax = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CloudSet4" index="0"]
+
+position = Vector2( 390, 240 )
+shape = SubResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="unicorn-cloud" type="Sprite" parent="CloudSet4" index="1"]
+
+position = Vector2( 430, 230 )
+scale = Vector2( 0.347619, 0.347619 )
+texture = ExtResource( 9 )
+
+[node name="cloud2" type="Sprite" parent="CloudSet4" index="2"]
+
+position = Vector2( 680, 40 )
+scale = Vector2( 0.222562, 0.222562 )
+texture = ExtResource( 4 )
+
+[node name="cloud1" type="Sprite" parent="CloudSet4" index="3"]
+
+position = Vector2( 140, 440 )
+scale = Vector2( 0.315401, 0.315401 )
+texture = ExtResource( 3 )
+
+[node name="cloud3" type="Sprite" parent="CloudSet4" index="4"]
+
+position = Vector2( 106.128, -8.70135 )
+scale = Vector2( 0.257048, 0.257048 )
+texture = ExtResource( 6 )
+
+

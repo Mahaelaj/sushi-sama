@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Main/knifePool/knife/knife.png" type="Texture" id=1]
+
+[node name="Knife" type="CollisionPolygon2D"]
+
+build_mode = 0
+polygon = PoolVector2Array( 22.6734, 243.36, 21.879, -124.109, 18.7013, -180.514, 12.7431, -221.824, 9.96255, -235.57, 5.5932, -242.72, -0.365005, -234.379, -5.13158, -215.71, -10.6926, -174.797, -17.048, -82.643, -22.609, 41.156, -2.74829, 41.156, -1.55666, 243.052 )
+_sections_unfolded = [ "Collision", "collision" ]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 0.71698, 0.716972 )
+scale = Vector2( 0.33, 0.33 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+

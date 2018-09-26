@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/Main/powerDown/PowerDown.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Main/powerDown/power-up-purple.png" type="Texture" id=2]
+[ext_resource path="res://sharedScripts/PowerUpColor.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Main/powerDown/power-up-blue.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Main/powerDown/power-up-green.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Main/powerDown/power-up-yellow.png" type="Texture" id=6]
+
+[node name="PowerDown" type="Node2D"]
+
+pause_mode = 2
+script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
+
+[node name="PowerDownPurple" type="Sprite" parent="." index="0"]
+
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -43.5, 0 )
+scale = Vector2( 0.475, 0.475 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[node name="PowerDownBlue" type="Sprite" parent="." index="1"]
+
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -20.5, 0 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 4 )
+script = ExtResource( 3 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[node name="PowerDownGreen" type="Sprite" parent="." index="2"]
+
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -9, 0 )
+scale = Vector2( 0.175, 0.175 )
+texture = ExtResource( 5 )
+script = ExtResource( 3 )
+_sections_unfolded = [ "Material", "Transform", "Visibility" ]
+
+[node name="PowerDownYellow" type="Sprite" parent="." index="3"]
+
+modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 6 )
+script = ExtResource( 3 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="ShrinkTimer" type="Timer" parent="." index="4"]
+
+process_mode = 1
+wait_time = 0.25
+one_shot = true
+autostart = false
+
+[connection signal="timeout" from="ShrinkTimer" to="." method="_on_ShrinkTimer_timeout"]
+
+

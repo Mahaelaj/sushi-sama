@@ -1,0 +1,436 @@
+[gd_scene load_steps=117 format=2]
+
+[ext_resource path="res://Scenes/Main/MainScene.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Main/sky.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Main/cloudPool/CloudPool.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Main/mouthPool/MouthPool.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Main/knifePool/KnifePool.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Main/foodPool/FoodPool.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Main/sushi/Sushi.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Main/GamjaFlower-Regular.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Scenes/Main/card/tapCard1.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/Main/card/tapCard2.png" type="Texture" id=10]
+[ext_resource path="res://Scenes/Main/card/tapCard3.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/Main/card/tapCard5.png" type="Texture" id=12]
+[ext_resource path="res://Scenes/Main/card/tapCard6.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/Main/card/tapCard7.png" type="Texture" id=14]
+[ext_resource path="res://Scenes/Main/card/tapCard8.png" type="Texture" id=15]
+[ext_resource path="res://Scenes/Main/card/tapCard9.png" type="Texture" id=16]
+[ext_resource path="res://Scenes/Main/card/tapCard10.png" type="Texture" id=17]
+[ext_resource path="res://Scenes/Main/card/tapCard11.png" type="Texture" id=18]
+[ext_resource path="res://Scenes/Main/card/tapCard12.png" type="Texture" id=19]
+[ext_resource path="res://Scenes/Main/card/tapCard13.png" type="Texture" id=20]
+[ext_resource path="res://Scenes/Main/card/tapCard14.png" type="Texture" id=21]
+[ext_resource path="res://Scenes/Main/card/tapCard15.png" type="Texture" id=22]
+[ext_resource path="res://Scenes/Main/card/tapCard16.png" type="Texture" id=23]
+[ext_resource path="res://Scenes/Main/card/tapCard17.png" type="Texture" id=24]
+[ext_resource path="res://Scenes/Main/card/tapCard18.png" type="Texture" id=25]
+[ext_resource path="res://Scenes/Main/card/tapCard19.png" type="Texture" id=26]
+[ext_resource path="res://Scenes/Main/card/tapCard20.png" type="Texture" id=27]
+[ext_resource path="res://Scenes/Main/card/tapCard21.png" type="Texture" id=28]
+[ext_resource path="res://Scenes/Main/card/tapCard22.png" type="Texture" id=29]
+[ext_resource path="res://Scenes/Main/card/tapCard23.png" type="Texture" id=30]
+[ext_resource path="res://Scenes/Main/card/tapCard24.png" type="Texture" id=31]
+[ext_resource path="res://Scenes/Main/card/tapCard25.png" type="Texture" id=32]
+[ext_resource path="res://Scenes/Main/card/tapCard26.png" type="Texture" id=33]
+[ext_resource path="res://Scenes/Main/card/tapCard27.png" type="Texture" id=34]
+[ext_resource path="res://Scenes/Main/card/tapCard28.png" type="Texture" id=35]
+[ext_resource path="res://Scenes/Main/card/tapCard29.png" type="Texture" id=36]
+[ext_resource path="res://Scenes/Main/card/tapCard30.png" type="Texture" id=37]
+[ext_resource path="res://Scenes/Main/card/tapCard31.png" type="Texture" id=38]
+[ext_resource path="res://Scenes/Main/card/tapCard32.png" type="Texture" id=39]
+[ext_resource path="res://Scenes/Main/card/tapCard33.png" type="Texture" id=40]
+[ext_resource path="res://Scenes/Main/card/tapCard34.png" type="Texture" id=41]
+[ext_resource path="res://Scenes/Main/card/tapCard35.png" type="Texture" id=42]
+[ext_resource path="res://Scenes/Main/card/tapCard36.png" type="Texture" id=43]
+[ext_resource path="res://Scenes/Main/card/tapCard37.png" type="Texture" id=44]
+[ext_resource path="res://Scenes/Main/card/tapCard38.png" type="Texture" id=45]
+[ext_resource path="res://Scenes/Main/card/tapCard39.png" type="Texture" id=46]
+[ext_resource path="res://Scenes/Main/card/tapCard40.png" type="Texture" id=47]
+[ext_resource path="res://Scenes/Main/card/tapCard41.png" type="Texture" id=48]
+[ext_resource path="res://Scenes/Main/card/tapCard42.png" type="Texture" id=49]
+[ext_resource path="res://Scenes/Main/card/tapCard43.png" type="Texture" id=50]
+[ext_resource path="res://Scenes/Main/card/tapCard44.png" type="Texture" id=51]
+[ext_resource path="res://Scenes/Main/card/tapCard45.png" type="Texture" id=52]
+[ext_resource path="res://Scenes/Main/card/tapCard46.png" type="Texture" id=53]
+[ext_resource path="res://Scenes/Main/card/tapCard47.png" type="Texture" id=54]
+[ext_resource path="res://Scenes/Main/card/tapCard48.png" type="Texture" id=55]
+[ext_resource path="res://Scenes/Main/card/tapCard49.png" type="Texture" id=56]
+[ext_resource path="res://Scenes/Main/card/tapCard50.png" type="Texture" id=57]
+[ext_resource path="res://Scenes/Main/card/tapCard51.png" type="Texture" id=58]
+[ext_resource path="res://Scenes/Main/card/tapCard52.png" type="Texture" id=59]
+[ext_resource path="res://Scenes/Main/card/tapCard53.png" type="Texture" id=60]
+[ext_resource path="res://Scenes/Main/card/tapCard54.png" type="Texture" id=61]
+[ext_resource path="res://Scenes/Main/card/tapCard55.png" type="Texture" id=62]
+[ext_resource path="res://Scenes/Main/card/tapCard56.png" type="Texture" id=63]
+[ext_resource path="res://Scenes/Main/card/tapCard57.png" type="Texture" id=64]
+[ext_resource path="res://Scenes/Main/card/tapCard58.png" type="Texture" id=65]
+[ext_resource path="res://Scenes/Main/card/tapCard59.png" type="Texture" id=66]
+[ext_resource path="res://Scenes/Main/card/tapCard60.png" type="Texture" id=67]
+[ext_resource path="res://Scenes/Main/card/tapCard61.png" type="Texture" id=68]
+[ext_resource path="res://Scenes/Main/card/tapCard62.png" type="Texture" id=69]
+[ext_resource path="res://Scenes/Main/card/tapCard63.png" type="Texture" id=70]
+[ext_resource path="res://Scenes/Main/card/tapCard64.png" type="Texture" id=71]
+[ext_resource path="res://Scenes/Main/card/tapCard65.png" type="Texture" id=72]
+[ext_resource path="res://Scenes/Main/card/tapCard66.png" type="Texture" id=73]
+[ext_resource path="res://Scenes/Main/card/tapCard67.png" type="Texture" id=74]
+[ext_resource path="res://Scenes/Main/card/tapCard68.png" type="Texture" id=75]
+[ext_resource path="res://Scenes/Main/card/tapCard69.png" type="Texture" id=76]
+[ext_resource path="res://Scenes/Main/card/tapCard70.png" type="Texture" id=77]
+[ext_resource path="res://Scenes/Main/card/tapCard71.png" type="Texture" id=78]
+[ext_resource path="res://Scenes/Main/card/tapCard72.png" type="Texture" id=79]
+[ext_resource path="res://Scenes/Main/card/tapCard73.png" type="Texture" id=80]
+[ext_resource path="res://Scenes/Main/card/tapCard74.png" type="Texture" id=81]
+[ext_resource path="res://Scenes/Main/card/tapCard75.png" type="Texture" id=82]
+[ext_resource path="res://Scenes/Main/card/tapCard76.png" type="Texture" id=83]
+[ext_resource path="res://Scenes/Main/card/tapCard77.png" type="Texture" id=84]
+[ext_resource path="res://Scenes/Main/card/tapCard78.png" type="Texture" id=85]
+[ext_resource path="res://Scenes/Main/card/tapCard79.png" type="Texture" id=86]
+[ext_resource path="res://Scenes/Main/card/tapCard80.png" type="Texture" id=87]
+[ext_resource path="res://Scenes/Main/card/tapCard81.png" type="Texture" id=88]
+[ext_resource path="res://Scenes/Main/card/tapCard82.png" type="Texture" id=89]
+[ext_resource path="res://Scenes/Main/card/tapCard83.png" type="Texture" id=90]
+[ext_resource path="res://Scenes/Main/card/tapCard84.png" type="Texture" id=91]
+[ext_resource path="res://Scenes/Main/card/tapCard85.png" type="Texture" id=92]
+[ext_resource path="res://Scenes/Main/card/tapCard86.png" type="Texture" id=93]
+[ext_resource path="res://Scenes/Main/card/tapCard87.png" type="Texture" id=94]
+[ext_resource path="res://Scenes/Main/card/tapCard88.png" type="Texture" id=95]
+[ext_resource path="res://Scenes/Main/card/tapCard89.png" type="Texture" id=96]
+[ext_resource path="res://Scenes/Main/card/tapCard90.png" type="Texture" id=97]
+[ext_resource path="res://Scenes/Main/card/tapCard91.png" type="Texture" id=98]
+[ext_resource path="res://Scenes/Main/card/tapCard92.png" type="Texture" id=99]
+[ext_resource path="res://Scenes/Main/card/tapCard93.png" type="Texture" id=100]
+[ext_resource path="res://Scenes/Main/click.png" type="Texture" id=101]
+[ext_resource path="res://Scenes/Main/tap.png" type="Texture" id=102]
+[ext_resource path="res://Scenes/Main/gameOver/GameOver.tscn" type="PackedScene" id=103]
+[ext_resource path="res://Scenes/Main/White.gd" type="Script" id=104]
+[ext_resource path="res://sound/sushiBounce.wav" type="AudioStream" id=105]
+[ext_resource path="res://sound/hitfloor.wav" type="AudioStream" id=106]
+[ext_resource path="res://sound/hit-knife.wav" type="AudioStream" id=107]
+[ext_resource path="res://sound/menu-button.wav" type="AudioStream" id=108]
+[ext_resource path="res://sound/mouth.wav" type="AudioStream" id=109]
+[ext_resource path="res://Scenes/Main/tutorial/Tutorial.tscn" type="PackedScene" id=110]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 402.907, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 117.575, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 274.582 )
+
+[sub_resource type="DynamicFont" id=4]
+
+size = 64
+use_mipmaps = false
+use_filter = true
+font_data = ExtResource( 8 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="SpriteFrames" id=5]
+
+animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 82 ), ExtResource( 83 ), ExtResource( 84 ), ExtResource( 85 ), ExtResource( 86 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 91 ), ExtResource( 92 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 96 ), ExtResource( 97 ), ExtResource( 98 ), ExtResource( 99 ), ExtResource( 100 ) ],
+"loop": true,
+"name": "default",
+"speed": 20.0
+} ]
+
+[sub_resource type="StreamTexture" id=6]
+
+flags = 4
+load_path = ""
+
+[node name="MainScene" type="Node2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_horizontal_guides_": [ 250.0 ],
+"_edit_vertical_guides_": [ 400.0 ]
+}
+
+[node name="Button" type="Button" parent="." index="0"]
+
+pause_mode = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 800.0
+margin_bottom = 480.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 1
+_sections_unfolded = [ "Focus", "Mouse", "Pause", "Visibility" ]
+
+[node name="Sky" type="Sprite" parent="." index="1"]
+
+position = Vector2( 407.5, 245 )
+scale = Vector2( 10, 5.1 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="CloudPool" parent="." index="2" instance=ExtResource( 3 )]
+
+[node name="Ceiling" type="StaticBody2D" parent="." index="3"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ceiling" index="0"]
+
+position = Vector2( 396.839, -22.8227 )
+shape = SubResource( 1 )
+
+[node name="Floor" type="Area2D" parent="." index="4" groups=[
+"floor",
+]]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" index="0"]
+
+position = Vector2( 230, 490 )
+shape = SubResource( 2 )
+
+[node name="MouthPool" parent="." index="5" instance=ExtResource( 4 )]
+
+[node name="KnifePool" parent="." index="6" instance=ExtResource( 5 )]
+
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="FoodPool" parent="." index="7" instance=ExtResource( 6 )]
+
+[node name="NewItemTimer" type="Timer" parent="." index="8"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = true
+
+[node name="Sushi" parent="." index="9" instance=ExtResource( 7 )]
+
+position = Vector2( 234.5, 168.5 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="LeftWall" type="Area2D" parent="." index="10" groups=[
+"left wall",
+]]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitorable = false
+collision_layer = 0
+collision_mask = 6
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall" index="0"]
+
+position = Vector2( -107.479, 238.227 )
+shape = SubResource( 3 )
+
+[node name="ScoreLabel" type="Label" parent="." index="11"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 20.0
+margin_right = 140.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="StartCard" type="AnimatedSprite" parent="." index="12"]
+
+pause_mode = 2
+editor/display_folded = true
+position = Vector2( 400, 270 )
+scale = Vector2( 0.139697, 0.139697 )
+frames = SubResource( 5 )
+animation = "default"
+frame = 27
+playing = true
+_sections_unfolded = [ "Pause" ]
+
+[node name="click" type="Sprite" parent="StartCard" index="0"]
+
+position = Vector2( -10, 20 )
+texture = ExtResource( 101 )
+
+[node name="tap" type="Sprite" parent="StartCard" index="1"]
+
+visible = false
+position = Vector2( -10, 20 )
+texture = ExtResource( 102 )
+
+[node name="GameOver" parent="." index="13" instance=ExtResource( 103 )]
+
+pause_mode = 2
+visible = false
+position = Vector2( 130, 0 )
+_sections_unfolded = [ "Pause", "Transform", "Visibility", "Z Index" ]
+
+[node name="GameOverMenuTimer" type="Timer" parent="." index="14"]
+
+pause_mode = 2
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+_sections_unfolded = [ "Pause" ]
+
+[node name="White" type="Sprite" parent="." index="15"]
+
+pause_mode = 2
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 400, 240 )
+scale = Vector2( 80, 48 )
+texture = SubResource( 6 )
+script = ExtResource( 104 )
+_sections_unfolded = [ "Material", "Pause", "Visibility" ]
+
+[node name="SushiBounceAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="16"]
+
+stream = ExtResource( 105 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="HitFloorAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="17"]
+
+pause_mode = 2
+stream = ExtResource( 106 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+_sections_unfolded = [ "Pause" ]
+
+[node name="HitKnifeAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="18"]
+
+pause_mode = 2
+stream = ExtResource( 107 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+_sections_unfolded = [ "Pause" ]
+
+[node name="EatFoodAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="19"]
+
+stream = ExtResource( 108 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="MouthAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="20"]
+
+stream = ExtResource( 109 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
+[node name="AmbienceAudioStream2d" type="AudioStreamPlayer2D" parent="." index="21"]
+
+pause_mode = 2
+stream = null
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+_sections_unfolded = [ "Pause" ]
+
+[node name="Tutorial" parent="." index="22" instance=ExtResource( 110 )]
+
+position = Vector2( 400, 250 )
+
+[connection signal="button_up" from="Button" to="." method="_on_Button_button_up"]
+
+[connection signal="timeout" from="NewItemTimer" to="." method="_on_NewItemTimer_timeout"]
+
+[connection signal="addPoints" from="Sushi" to="." method="_on_Sushi_addPoints"]
+
+[connection signal="gameOver" from="Sushi" to="." method="_on_Sushi_gameOver"]
+
+[connection signal="body_entered" from="LeftWall" to="." method="_on_LeftWall_body_entered"]
+
+[connection signal="body_exited" from="LeftWall" to="." method="_on_LeftWall_body_exited"]
+
+[connection signal="loadMainScene" from="GameOver" to="." method="_on_GameOver_loadMainScene"]
+
+[connection signal="loadMenuScene" from="GameOver" to="." method="_on_GameOver_loadMenuScene"]
+
+[connection signal="timeout" from="GameOverMenuTimer" to="." method="_on_GameOverMenuTimer_timeout"]
+
+

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/393520__frankum__ambient-guitar-x1-loop-mode.ogg-23db40639a130cdd9129ae7798e88ee8.oggstr"
+
+[deps]
+
+source_file="res://sound/393520__frankum__ambient-guitar-x1-loop-mode.ogg"
+dest_files=[ "res://.import/393520__frankum__ambient-guitar-x1-loop-mode.ogg-23db40639a130cdd9129ae7798e88ee8.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

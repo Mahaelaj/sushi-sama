@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/hit-knife.wav-f870100ceac699d19e01a182c5cf52a6.sample"
+
+[deps]
+
+source_file="res://sound/hit-knife.wav"
+dest_files=[ "res://.import/hit-knife.wav-f870100ceac699d19e01a182c5cf52a6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

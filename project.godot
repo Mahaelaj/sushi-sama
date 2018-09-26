@@ -1,0 +1,29 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=3
+
+[application]
+
+config/name="Sushi Sama"
+run/main_scene="res://Scenes/nachoBuddy/NachoBuddy.tscn"
+config/icon="res://sushi-icon.png"
+
+[autoload]
+
+playerData="*res://sharedScripts/playerData.gd"
+database="*res://sharedScripts/saveData.gd"
+
+[display]
+
+window/size/width=800
+window/size/height=480
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

@@ -1,0 +1,99 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/Main/sushi/Sushi.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Main/sushi/ricePieces/RicePieces.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Main/sushi/sushi.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Main/powerUp/PowerUp.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Main/powerDown/PowerDown.tscn" type="PackedScene" id=5]
+
+[sub_resource type="CapsuleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 45.5192
+height = 71.7261
+
+[sub_resource type="CapsuleShape2D" id=3]
+
+custom_solver_bias = 0.0
+radius = 45.4583
+height = 72.5665
+
+[node name="Sushi" type="KinematicBody2D" groups=[
+"sushi",
+]]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision", "Pickable", "Transform", "Visibility", "Z Index" ]
+
+[node name="ScaleTween" type="Tween" parent="." index="0"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="RicePieces" parent="." index="1" instance=ExtResource( 2 )]
+
+pause_mode = 2
+position = Vector2( -8.97665, 4.53369 )
+scale = Vector2( 0.730123, 0.730123 )
+_sections_unfolded = [ "Pause", "Transform", "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+
+position = Vector2( -0.0491333, 1 )
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Area2D" type="Area2D" parent="." index="3"]
+
+editor/display_folded = true
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+monitorable = false
+collision_layer = 0
+collision_mask = 3
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+
+position = Vector2( 0, 1 )
+shape = SubResource( 3 )
+
+[node name="RotationTween" type="Tween" parent="." index="4"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[node name="Sprite" type="Sprite" parent="." index="5"]
+
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="PowerUp" parent="." index="6" instance=ExtResource( 4 )]
+
+scale = Vector2( 1.25, 1.25 )
+_sections_unfolded = [ "Pause", "Transform" ]
+
+[node name="PowerDown" parent="." index="7" instance=ExtResource( 5 )]
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+
+

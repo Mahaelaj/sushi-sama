@@ -1,0 +1,183 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Main/foodPool/FoodPool.gd" type="Script" id=1]
+[ext_resource path="res://sharedScripts/FoodItem.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Main/foodPool/ginger.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Main/foodPool/wasabi.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/Main/foodPool/soy-sauce.png" type="Texture" id=5]
+
+[node name="FoodPool" type="Node2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Ginger1" type="KinematicBody2D" parent="." index="0" groups=[
+"food",
+]]
+
+editor/display_folded = true
+position = Vector2( 853, 425 )
+scale = Vector2( 0.6, 0.6 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+collision/safe_margin = 0.08
+script = ExtResource( 2 )
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
+x = 853
+yMin = 90
+yMax = 400
+
+[node name="Sprite" type="Sprite" parent="Ginger1" index="0"]
+
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ginger1" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 28.2745, -71.7043, -6.05536, -73.905, -68.5534, -51.0184, -84.3979, -21.97, -83.5177, 15.4408, -72.9547, 37.4471, -41.2655, 60.3337, 12.4299, 74.4178, 44.1191, 70.0165, 62.1642, 57.6929, 77.1286, 35.2465, 84.1706, 13.6803, 84.1706, -9.64645, 67.8859, -48.3776, 47.6401, -65.9827 )
+
+[node name="Ginger2" type="KinematicBody2D" parent="." index="1" groups=[
+"food",
+]]
+
+editor/display_folded = true
+position = Vector2( 853, 200 )
+scale = Vector2( 0.6, 0.6 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+collision/safe_margin = 0.08
+script = ExtResource( 2 )
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
+x = 853
+yMin = 200
+yMax = 400
+
+[node name="Sprite" type="Sprite" parent="Ginger2" index="0"]
+
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ginger2" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 28.2745, -71.7043, -6.05536, -73.905, -68.5534, -51.0184, -84.3979, -21.97, -83.5177, 15.4408, -72.9547, 37.4471, -41.2655, 60.3337, 12.4299, 74.4178, 44.1191, 70.0165, 62.1642, 57.6929, 77.1286, 35.2465, 84.1706, 13.6803, 84.1706, -9.64645, 67.8859, -48.3776, 47.6401, -65.9827 )
+
+[node name="Wasabi1" type="KinematicBody2D" parent="." index="2" groups=[
+"food",
+]]
+
+editor/display_folded = true
+position = Vector2( 850, 125 )
+scale = Vector2( 0.6, 0.6 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+collision/safe_margin = 0.08
+script = ExtResource( 2 )
+_sections_unfolded = [ "Collision", "Transform", "Z Index" ]
+x = 850
+yMin = 200
+yMax = 400
+
+[node name="Sprite" type="Sprite" parent="Wasabi1" index="0"]
+
+texture = ExtResource( 4 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wasabi1" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 59.58, 3.72241, 66.7473, -5.76944, 68.8781, -21.8475, 62.873, -41.0249, 47.5698, -58.2653, 21.9999, -70.8565, 0.885376, -74.9244, -32.8204, -69.1131, -12.6744, -63.6892, -9.76874, -54.9722, -12.8682, -47.03, -32.8204, -38.7004, -61.1023, -26.884, -67.6885, -16.6173, -66.1388, -4.21976, -58.9715, 4.49725, -74.7952, 14.9261, -79.1965, 33.4114, -76.5557, 52.777, -56.7501, 66.861, -4.37494, 73.9031, 49.7607, 69.0617, 73.0873, 56.298, 80.1294, 33.8515, 73.0873, 11.4051 )
+
+[node name="Wasabi2" type="KinematicBody2D" parent="." index="3" groups=[
+"food",
+]]
+
+editor/display_folded = true
+position = Vector2( 850, 275 )
+scale = Vector2( 0.6, 0.6 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+collision/safe_margin = 0.08
+script = ExtResource( 2 )
+_sections_unfolded = [ "Collision", "Transform" ]
+x = 850
+yMin = 200
+yMax = 400
+
+[node name="Sprite" type="Sprite" parent="Wasabi2" index="0"]
+
+texture = ExtResource( 4 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wasabi2" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 59.58, 3.72241, 66.7473, -5.76944, 68.8781, -21.8475, 62.873, -41.0249, 47.5698, -58.2653, 21.9999, -70.8565, 0.885376, -74.9244, -32.8204, -69.1131, -12.6744, -63.6892, -9.76874, -54.9722, -12.8682, -47.03, -32.8204, -38.7004, -61.1023, -26.884, -67.6885, -16.6173, -66.1388, -4.21976, -58.9715, 4.49725, -74.7952, 14.9261, -79.1965, 33.4114, -76.5557, 52.777, -56.7501, 66.861, -4.37494, 73.9031, 49.7607, 69.0617, 73.0873, 56.298, 80.1294, 33.8515, 73.0873, 11.4051 )
+
+[node name="SoySauce1" type="KinematicBody2D" parent="." index="4" groups=[
+"food",
+]]
+
+editor/display_folded = true
+position = Vector2( 825, 336.529 )
+scale = Vector2( 0.7, 0.7 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+collision/safe_margin = 0.08
+script = ExtResource( 2 )
+_sections_unfolded = [ "Collision", "Transform" ]
+x = 825
+yMin = 200
+yMax = 400
+
+[node name="Sprite" type="Sprite" parent="SoySauce1" index="0"]
+
+texture = ExtResource( 5 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SoySauce1" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 14.5343, -49.2612, 22.1077, -10.9208, 31.4343, 20.4187, 32.806, 74.6667, -32.8734, 74.6667, -31.8002, 20.5778, -23.0079, -13.7893, -15.5489, -49.9246, -20.1799, -62.4467, -24.2678, -67.1185, -10.5443, -72.9583, 3.1792, -74.4182, 20.1146, -69.4544, 22.7424, -65.6585, 18.0706, -61.5707 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="SoySauce2" type="KinematicBody2D" parent="." index="5" groups=[
+"food",
+]]
+
+editor/display_folded = true
+position = Vector2( 825, 78.1357 )
+scale = Vector2( 0.7, 0.7 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+collision/safe_margin = 0.08
+script = ExtResource( 2 )
+_sections_unfolded = [ "Collision", "Transform" ]
+x = 825
+yMin = 200
+yMax = 400
+
+[node name="Sprite" type="Sprite" parent="SoySauce2" index="0"]
+
+texture = ExtResource( 5 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="SoySauce2" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 14.5343, -49.2612, 22.1077, -10.9208, 31.4343, 20.4187, 32.806, 74.6667, -32.8734, 74.6667, -31.8002, 20.5778, -23.0079, -13.7893, -15.5489, -49.9246, -20.1799, -62.4467, -24.2678, -67.1185, -10.5443, -72.9583, 3.1792, -74.4182, 20.1146, -69.4544, 22.7424, -65.6585, 18.0706, -61.5707 )
+
+[connection signal="removeItem" from="Ginger1" to="." method="_on_remove_food_item"]
+
+[connection signal="removeItem" from="Ginger2" to="." method="_on_remove_food_item"]
+
+[connection signal="removeItem" from="Wasabi1" to="." method="_on_remove_food_item"]
+
+[connection signal="removeItem" from="Wasabi2" to="." method="_on_remove_food_item"]
+
+[connection signal="removeItem" from="SoySauce1" to="." method="_on_remove_food_item"]
+
+[connection signal="removeItem" from="SoySauce2" to="." method="_on_remove_food_item"]
+
+

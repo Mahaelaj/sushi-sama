@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/nachoBuddy/NachoBuddy.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/nachoBuddy/white.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/nachoBuddy/nacho-buddy.png" type="Texture" id=3]
+
+[node name="NachoBuddy" type="Node2D" index="0"]
+
+position = Vector2( 1, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_vertical_guides_": [ 400.0 ]
+}
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 397.5, 237.5 )
+scale = Vector2( 80.5, 48.5 )
+texture = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="." index="1"]
+
+process_mode = 1
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[node name="nacho-buddy" type="Sprite" parent="." index="2"]
+
+position = Vector2( 399, 232 )
+texture = ExtResource( 3 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+

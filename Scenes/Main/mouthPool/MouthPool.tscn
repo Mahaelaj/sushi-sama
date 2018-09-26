@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Main/mouthPool/MouthPool.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Main/mouthPool/mouth/Mouth.tscn" type="PackedScene" id=2]
+
+[node name="MouthPool" type="Node2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Mouth1" parent="." index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 858, 380 )
+_sections_unfolded = [ "Collision", "Transform", "Z Index" ]
+x = 858
+yMin = 100
+yMax = 380
+
+[node name="Mouth5" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 858, 380 )
+_sections_unfolded = [ "Collision", "Transform", "Z Index" ]
+x = 858
+yMin = 100
+yMax = 380
+
+[node name="Mouth2" parent="." index="2" instance=ExtResource( 2 )]
+
+position = Vector2( 858, 250 )
+_sections_unfolded = [ "Collision", "Transform" ]
+x = 858
+yMin = 100
+yMax = 380
+
+[node name="Mouth6" parent="." index="3" instance=ExtResource( 2 )]
+
+position = Vector2( 858, 250 )
+_sections_unfolded = [ "Collision", "Transform", "Visibility" ]
+x = 858
+yMin = 100
+yMax = 380
+
+[node name="Mouth3" parent="." index="4" instance=ExtResource( 2 )]
+
+position = Vector2( 858, 100 )
+_sections_unfolded = [ "Collision", "Transform" ]
+x = 858
+yMin = 100
+yMax = 380
+
+[node name="Mouth4" parent="." index="5" instance=ExtResource( 2 )]
+
+position = Vector2( 858, 100 )
+_sections_unfolded = [ "Collision", "Transform" ]
+x = 858
+yMin = 100
+yMax = 380
+
+[connection signal="removeItem" from="Mouth1" to="." method="_on_Mouth_removeItem"]
+
+[connection signal="removeItem" from="Mouth5" to="." method="_on_Mouth_removeItem"]
+
+[connection signal="removeItem" from="Mouth2" to="." method="_on_Mouth_removeItem"]
+
+[connection signal="removeItem" from="Mouth6" to="." method="_on_Mouth_removeItem"]
+
+[connection signal="removeItem" from="Mouth3" to="." method="_on_Mouth_removeItem"]
+
+[connection signal="removeItem" from="Mouth4" to="." method="_on_Mouth_removeItem"]
+
+

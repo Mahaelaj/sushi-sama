@@ -1,0 +1,247 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Main/knifePool/KnifePool.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Main/knifePool/KnifeLarge1.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Main/knifePool/knife/Knife.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sharedScripts/KnifeItem.gd" type="Script" id=4]
+
+[node name="KnifePool" type="Node2D"]
+
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 479.358 ]
+}
+
+[node name="KnifeLarge1" type="KinematicBody2D" parent="." index="0" groups=[
+"knives",
+]]
+
+editor/display_folded = true
+position = Vector2( 850, 315 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+collision/safe_margin = 0.08
+script = ExtResource( 2 )
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
+x = 850
+yMin = 0
+yMax = 0
+yTop = 0
+yBottom = 0
+
+[node name="KnifeLarge1" parent="KnifeLarge1" index="0" instance=ExtResource( 3 )]
+
+scale = Vector2( 0.5, 0.68 )
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
+
+[node name="KnifeLarge2" type="KinematicBody2D" parent="." index="1" groups=[
+"knives",
+]]
+
+editor/display_folded = true
+position = Vector2( 850, 315 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+collision/safe_margin = 0.08
+script = ExtResource( 4 )
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
+x = 813
+yMin = 0
+yMax = 0
+yTop = 0
+yBottom = 0
+
+[node name="KnifeLarge2" parent="KnifeLarge2" index="0" instance=ExtResource( 3 )]
+
+scale = Vector2( 0.5, 0.68 )
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
+
+[node name="KnifeLarge3" type="KinematicBody2D" parent="." index="2" groups=[
+"knives",
+]]
+
+editor/display_folded = true
+position = Vector2( 850, 165 )
+scale = Vector2( 1, -1 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+collision/safe_margin = 0.08
+script = ExtResource( 4 )
+_sections_unfolded = [ "Collision", "Transform" ]
+x = 813
+yMin = 0
+yMax = 0
+yTop = 0
+yBottom = 0
+
+[node name="Knife" parent="KnifeLarge3" index="0" instance=ExtResource( 3 )]
+
+scale = Vector2( 0.5, 0.68 )
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
+
+[node name="KnifeLarge4" type="KinematicBody2D" parent="." index="3" groups=[
+"knives",
+]]
+
+editor/display_folded = true
+position = Vector2( 850, 165 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+collision/safe_margin = 0.08
+script = ExtResource( 4 )
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
+x = 813
+yMin = 0
+yMax = 0
+yTop = 0
+yBottom = 0
+
+[node name="Knife" parent="KnifeLarge4" index="0" instance=ExtResource( 3 )]
+
+scale = Vector2( 0.5, -0.68 )
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
+
+[node name="KnifeSet1" type="KinematicBody2D" parent="." index="4" groups=[
+"knives",
+]]
+
+editor/display_folded = true
+position = Vector2( 850, 0 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+collision/safe_margin = 0.08
+script = ExtResource( 4 )
+_sections_unfolded = [ "Collision", "Pause", "Transform" ]
+x = 813
+yMin = 0
+yMax = 0
+yTop = 0
+yBottom = 0
+
+[node name="Knife1" parent="KnifeSet1" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 0, 97.213 )
+scale = Vector2( 0.5, -0.4 )
+polygon = PoolVector2Array( 22.8124, 245.241, 21.9999, -59, 14.9999, -214, 5.99988, -247, -5.00012, -223, -11.0001, -188, -23.0442, 40.052, -3.05084, 41.673, -2.91144, 93.8141, -2.5105, 243.768 )
+_sections_unfolded = [ "Collision", "Transform", "Visibility", "collision" ]
+
+[node name="KnifeSmall1" parent="KnifeSet1" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 0, 407.696 )
+scale = Vector2( 0.5, 0.3 )
+polygon = PoolVector2Array( 22.8124, 245.241, 21.9999, -59, 14.9999, -214, 5.99988, -247, -5.00012, -223, -11.0001, -188, -23.0442, 40.052, -3.05084, 41.673, -2.65833, 188.503, -2.5105, 243.768 )
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
+
+[node name="KnifeSet2" type="KinematicBody2D" parent="." index="5" groups=[
+"knives",
+]]
+
+editor/display_folded = true
+position = Vector2( 850, 0 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+collision/safe_margin = 0.08
+script = ExtResource( 4 )
+_sections_unfolded = [ "Collision", "Transform", "Z Index" ]
+x = 813
+yMin = 0
+yMax = 0
+yTop = 0
+yBottom = 0
+
+[node name="Knife1" parent="KnifeSet2" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 0, 97.3852 )
+scale = Vector2( 0.5, -0.4 )
+polygon = PoolVector2Array( 22.8124, 245.241, 22.476, 119.268, 21.9999, -59, 14.9999, -214, 5.99988, -247, -5.00012, -223, -11.0001, -188, -23.0442, 40.052, -3.05084, 41.673, -2.91144, 93.8141, -2.5105, 243.768 )
+_sections_unfolded = [ "Collision", "Transform", "Visibility", "collision" ]
+
+[node name="KnifeSmall1" parent="KnifeSet2" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 0, 409.696 )
+scale = Vector2( 0.5, 0.3 )
+polygon = PoolVector2Array( 22.8124, 245.241, 21.9999, -59, 14.9999, -214, 5.99988, -247, -5.00012, -223, -11.0001, -188, -23.0442, 40.052, -3.05084, 41.673, -2.65833, 188.503, -2.5105, 243.768 )
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
+
+[node name="KnifeSet3" type="KinematicBody2D" parent="." index="6" groups=[
+"knives",
+]]
+
+editor/display_folded = true
+position = Vector2( 850, 0 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+collision/safe_margin = 0.08
+script = ExtResource( 4 )
+_sections_unfolded = [ "Collision", "Transform" ]
+x = 813
+yMin = 0
+yMax = 0
+yTop = 0
+yBottom = 0
+
+[node name="Knife2" parent="KnifeSet3" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 0, 381.874 )
+scale = Vector2( 0.5, 0.4 )
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
+
+[node name="KnifeSmall2" parent="KnifeSet3" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 0, 72.2173 )
+scale = Vector2( 0.5, -0.3 )
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
+
+[node name="KnifeSet4" type="KinematicBody2D" parent="." index="7" groups=[
+"knives",
+]]
+
+position = Vector2( 850, 0 )
+input_pickable = false
+collision_layer = 2
+collision_mask = 0
+collision/safe_margin = 0.08
+script = ExtResource( 4 )
+_sections_unfolded = [ "Collision", "Transform" ]
+x = 813
+yMin = 0
+yMax = 0
+yTop = 0
+yBottom = 0
+
+[node name="Knife2" parent="KnifeSet4" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 0, 382.478 )
+scale = Vector2( 0.5, 0.4 )
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
+
+[node name="KnifeSmall2" parent="KnifeSet4" index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 0, 72.2173 )
+scale = Vector2( 0.5, -0.3 )
+_sections_unfolded = [ "Collision", "Transform", "collision" ]
+
+[connection signal="removeItem" from="KnifeLarge1" to="." method="_on_Knife_removeItem"]
+
+[connection signal="removeItem" from="KnifeLarge2" to="." method="_on_Knife_removeItem"]
+
+[connection signal="removeItem" from="KnifeLarge3" to="." method="_on_Knife_removeItem"]
+
+[connection signal="removeItem" from="KnifeLarge4" to="." method="_on_Knife_removeItem"]
+
+[connection signal="removeItem" from="KnifeSet1" to="." method="_on_Knife_removeItem"]
+
+[connection signal="removeItem" from="KnifeSet2" to="." method="_on_Knife_removeItem"]
+
+[connection signal="removeItem" from="KnifeSet3" to="." method="_on_Knife_removeItem"]
+
+[connection signal="removeItem" from="KnifeSet4" to="." method="_on_Knife_removeItem"]
+
+
