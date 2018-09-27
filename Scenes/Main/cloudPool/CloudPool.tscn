@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://CloudPool.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Main/cloudPool/CloudPool.gd" type="Script" id=1]
 [ext_resource path="res://sharedScripts/CloudSetItem.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/Main/cloudPool/cloud1.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/Main/cloudPool/cloud2.png" type="Texture" id=4]
@@ -236,5 +236,13 @@ texture = ExtResource( 3 )
 position = Vector2( 106.128, -8.70135 )
 scale = Vector2( 0.257048, 0.257048 )
 texture = ExtResource( 6 )
+
+[connection signal="removeItem" from="CloudSet1" to="." method="_on_CloudSet_removeItem"]
+
+[connection signal="removeItem" from="CloudSet2" to="." method="_on_CloudSet_removeItem"]
+
+[connection signal="removeItem" from="CloudSet3" to="." method="_on_CloudSet_removeItem"]
+
+[connection signal="removeItem" from="CloudSet4" to="." method="_on_CloudSet_removeItem"]
 
 

@@ -22,3 +22,16 @@ func _on_TextureButton_button_up():
 		visible = false;
 		$ArrowTween.stop_all()
 		playerData.tutorialFinished = true;
+
+func _on_Card1TextureButton_button_up():
+	$AudioStreamPlayer2D.play(0)
+	$TutorialCard1.visible = false;
+	pass # replace with function body
+
+func _on_Card2TextureButton_button_up():
+	$AudioStreamPlayer2D.play(0)
+	isTutorialPlaying = false;
+	playerData.tutorialFinished = true;
+	visible = false;
+	$ArrowTween.stop_all()
+	pass # replace with function body

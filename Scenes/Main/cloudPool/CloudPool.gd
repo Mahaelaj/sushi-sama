@@ -17,9 +17,9 @@ func initCloudSet():
 	return cloudSet;
 
 func _on_cloudHitWall():
-	initCloudSet();
 	pass # replace with function body
 
 func _on_CloudSet_removeItem(item):
 	cloudSets.append(item);
+	initCloudSet();
 	pass # replace with function body

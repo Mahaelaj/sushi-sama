@@ -73,7 +73,9 @@ func _on_SushiMoveTween_tween_completed(object, key):
 	pass # replace with function body
 
 func _on_PlayButton_button_up():
-	if (playerData.soundEffectsOn): $StartGameButtonAudioStreamPlayer2D.play(0);
+	if (playerData.soundEffectsOn): 
+		$StartGameButtonAudioStreamPlayer2D.play(0);
+		$StartGameTimer.start()
 	else: get_tree().change_scene("res://Scenes/Main/MainScene.tscn")
 	pass # replace with function body
 
@@ -88,10 +90,6 @@ func _on_MusicButton_button_up():
 		$CanvasLayer/SettingsPanel/MusicButton.texture_normal = musicOffTexture;
 		$CanvasLayer/SettingsPanel/MusicTouchScreenButton.normal = musicOffTexture;
 		$AmbientAudioStreamPlayer2D.stop()
-	pass # replace with function body
-
-func _on_StartGameButtonAudioStreamPlayer2D_finished():
-	get_tree().change_scene("res://Scenes/Main/MainScene.tscn")
 	pass # replace with function body
 
 func _on_SettingsButton_button_up():
@@ -115,4 +113,8 @@ func _on_SoundEffectsButton_button_up():
 	else: 
 		$CanvasLayer/SettingsPanel/SoundEffectsButton.texture_normal = soundEffectsOffTexture;
 		$CanvasLayer/SettingsPanel/SoundEffectsTouchScreenButton.normal = soundEffectsOffTexture;
+	pass # replace with function body
+
+func _on_StartGameTimer_timeout():
+	get_tree().change_scene("res://Scenes/Main/MainScene.tscn")
 	pass # replace with function body

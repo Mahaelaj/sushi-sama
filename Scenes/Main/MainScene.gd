@@ -34,8 +34,6 @@ func _on_Sushi_gameOver(hit_floor):
 
 func _on_NewItemTimer_timeout():
 	var number = randi() % 100;
-	$MouthPool.initMouthItem($Sushi.scale / $Sushi.startScale);
-	return;
 	if (number < 20): 
 		$FoodPool.initFoodItem();
 	elif (number < 95):
@@ -84,5 +82,6 @@ func _on_GameOver_loadMainScene():
 	pass # replace with function body
 
 func _on_GameOver_loadMenuScene():
-	get_tree().change_scene("res://Scenes/menu/startScene.tscn")
+	get_tree().paused = false 
+	get_tree().change_scene("res://Scenes/menu/StartScene.tscn")
 	pass # replace with function body

@@ -172,12 +172,26 @@ position = Vector2( 390, 235 )
 scale = Vector2( 0.196283, 0.196283 )
 texture = ExtResource( 10 )
 
+[node name="LoadMainSceneTimer" type="Timer" parent="." index="8"]
+
+process_mode = 1
+wait_time = 0.5
+one_shot = true
+autostart = false
+
+[node name="LoadMenuSceneTimer" type="Timer" parent="." index="9"]
+
+process_mode = 1
+wait_time = 0.5
+one_shot = true
+autostart = false
+
 [connection signal="button_up" from="MenuButton" to="." method="_on_MenuButton_button_up"]
 
-[connection signal="finished" from="MenuButtonAudioStreamPlayer2D" to="." method="_on_MenuButtonAudioStreamPlayer2D_finished"]
-
-[connection signal="finished" from="PlayAgainAudioStreamPlayer2D" to="." method="_on_PlayAgainAudioStreamPlayer2D_finished"]
-
 [connection signal="button_up" from="PlayAgainButton" to="." method="_on_PlayAgainButton_button_up"]
+
+[connection signal="timeout" from="LoadMainSceneTimer" to="." method="_on_LoadMainSceneTimer_timeout"]
+
+[connection signal="timeout" from="LoadMenuSceneTimer" to="." method="_on_LoadMenuSceneTimer_timeout"]
 
 

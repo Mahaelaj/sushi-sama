@@ -79,13 +79,12 @@ _sections_unfolded = [ "Offset", "Transform" ]
 [node name="Sushi" type="KinematicBody2D" parent="." index="3"]
 
 pause_mode = 2
-editor/display_folded = true
-position = Vector2( 125, 360 )
+position = Vector2( 115, 360 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
-_sections_unfolded = [ "Offset", "Pause" ]
+_sections_unfolded = [ "Offset", "Pause", "Transform" ]
 
 [node name="Tail" type="Line2D" parent="Sushi" index="0"]
 
@@ -178,6 +177,7 @@ playback/speed = 1.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="6"]
 
+editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -241,6 +241,7 @@ _sections_unfolded = [ "Grow Direction", "custom_colors", "custom_fonts" ]
 
 [node name="SettingsPanel" type="Sprite" parent="CanvasLayer" index="2"]
 
+editor/display_folded = true
 visible = false
 position = Vector2( 590, 290 )
 z_index = 2
@@ -392,7 +393,7 @@ max_distance = 2000.0
 attenuation = 1.0
 bus = "Master"
 area_mask = 1
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="AmbientAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="9"]
 
@@ -406,6 +407,8 @@ bus = "Master"
 area_mask = 1
 
 [node name="Buttons" type="Node2D" parent="." index="10"]
+
+editor/display_folded = true
 
 [node name="SettingsButton" type="TextureButton" parent="Buttons" index="0"]
 
@@ -485,6 +488,13 @@ action = ""
 visibility_mode = 1
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
+[node name="StartGameTimer" type="Timer" parent="." index="11"]
+
+process_mode = 1
+wait_time = 0.5
+one_shot = true
+autostart = false
+
 [connection signal="body_exited" from="CloudSensor" to="." method="_on_CloudSensor_body_exited"]
 
 [connection signal="tween_completed" from="SushiMoveTween" to="." method="_on_SushiMoveTween_tween_completed"]
@@ -501,8 +511,6 @@ _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [connection signal="released" from="CanvasLayer/SettingsPanel/ExitTouchScreenButton" to="." method="_on_ExitButton_button_up"]
 
-[connection signal="finished" from="StartGameButtonAudioStreamPlayer2D" to="." method="_on_StartGameButtonAudioStreamPlayer2D_finished"]
-
 [connection signal="button_up" from="Buttons/SettingsButton" to="." method="_on_SettingsButton_button_up"]
 
 [connection signal="released" from="Buttons/SettingsButton/SettingsTouchScreenButton" to="." method="_on_SettingsButton_button_up"]
@@ -510,5 +518,7 @@ _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 [connection signal="button_up" from="Buttons/PlayButton" to="." method="_on_PlayButton_button_up"]
 
 [connection signal="released" from="Buttons/PlayButton/PlayTouchScreenButton" to="." method="_on_PlayButton_button_up"]
+
+[connection signal="timeout" from="StartGameTimer" to="." method="_on_StartGameTimer_timeout"]
 
 
