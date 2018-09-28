@@ -22,8 +22,9 @@ database="*res://sharedScripts/saveData.gd"
 
 [display]
 
-window/size/width=800
-window/size/height=480
+window/size/width=600
+window/size/height=360
+window/stretch/shrink="1"
 
 [rendering]
 

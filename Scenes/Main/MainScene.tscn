@@ -107,8 +107,8 @@
 [ext_resource path="res://sound/sushiBounce.wav" type="AudioStream" id=105]
 [ext_resource path="res://sound/hitfloor.wav" type="AudioStream" id=106]
 [ext_resource path="res://sound/hit-knife.wav" type="AudioStream" id=107]
-[ext_resource path="res://sound/menu-button.wav" type="AudioStream" id=108]
-[ext_resource path="res://sound/mouth.wav" type="AudioStream" id=109]
+[ext_resource path="res://sound/eatfood.wav" type="AudioStream" id=108]
+[ext_resource path="res://sound/mouthEaten.wav" type="AudioStream" id=109]
 [ext_resource path="res://Scenes/Main/tutorial/Tutorial.tscn" type="PackedScene" id=110]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -150,6 +150,7 @@ load_path = ""
 
 [node name="MainScene" type="Node2D"]
 
+scale = Vector2( 0.75, 0.75 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 __meta__ = {
@@ -298,7 +299,7 @@ position = Vector2( 400, 270 )
 scale = Vector2( 0.139697, 0.139697 )
 frames = SubResource( 5 )
 animation = "default"
-frame = 14
+frame = 70
 playing = true
 _sections_unfolded = [ "Pause" ]
 

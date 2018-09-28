@@ -5,9 +5,12 @@ onready var musicOffTexture = preload("res://Scenes/menu/music-button-off.png");
 onready var musicOnTexture = preload("res://Scenes/menu/music-button.png");
 onready var soundEffectsOnTexture = preload("res://Scenes/menu/sound-effects-button.png");
 onready var soundEffectsOffTexture = preload("res://Scenes/menu/sound-effects-button-off.png");
+var sushiArmsYPos = 475;
+var sushiLeftArmXPos = -34;
+var sushiRightArmXPos = 114;
 
 func _ready():
-	$CanvasLayer/YourHighScoreText.text = "Your High Score: " + String(playerData.highScore);
+	$CanvasLayer/YourHighScoreText.text = "High Score: " + String(playerData.highScore);
 	$CanvasLayer/AllTimeHighScoreText.text = "All Time High Score: " + String(database.getData('high_score'));
 
 	if (!playerData.musicOn): 
@@ -28,14 +31,14 @@ func _ready():
 	sushiTail.global_position = sushi.position;
 
 	for i in (range(0, 150)):
-		sushiLeftArm.add_point(sushi.position + Vector2(-73 + (sin(i *.25) * 30), (-i) - 350));
-		sushiRightArm.add_point(sushi.position + Vector2(73 + (sin(i *.25) * -30), (-i) - 350));
+		sushiLeftArm.add_point(sushi.position + Vector2(sushiLeftArmXPos + (sin(i *.25) * 30), (-i) - sushiArmsYPos));
+		sushiRightArm.add_point(sushi.position + Vector2(sushiRightArmXPos + (sin(i *.25) * -30), (-i) - sushiArmsYPos));
 	pass
 
 	for i in (range(0, 150)):
-		sushiTail.add_point(Vector2(0, -150 + i));
+		sushiTail.add_point(Vector2(40, -300 + i));
 
-	$SushiMoveTween.interpolate_property($Sushi, 'position', Vector2(115, 360), Vector2(335, 360), 3, $SushiMoveTween.TRANS_QUAD, $SushiMoveTween.EASE_IN_OUT);
+	$SushiMoveTween.interpolate_property($Sushi, 'position', Vector2(-120, 360), Vector2(335, 360), 3, $SushiMoveTween.TRANS_QUAD, $SushiMoveTween.EASE_IN_OUT);
 	$SushiMoveTween.start()
 
 func _process(delta):
@@ -45,18 +48,18 @@ func _process(delta):
 	var handRight = $Sushi/HandRight;
 
 	for i in (range(0, sushiArmLeft.get_point_count())):
-		sushiArmLeft.set_point_position(i, Vector2(-73 + (sin((i + armWaveSpeed) * .125) * (i * .05)), sushiArmLeft.get_point_position(i).y));
+		sushiArmLeft.set_point_position(i, Vector2(sushiLeftArmXPos + (sin((i + armWaveSpeed) * .125) * (i * .05)), sushiArmLeft.get_point_position(i).y));
 
 	for i in (range(0, sushiArmRight.get_point_count())):
-		sushiArmRight.set_point_position(i, Vector2(73 + (sin((i + armWaveSpeed) * -.125) * (i * .05)), sushiArmRight.get_point_position(i).y));
+		sushiArmRight.set_point_position(i, Vector2(sushiRightArmXPos + (sin((i + armWaveSpeed) * -.125) * (i * .05)), sushiArmRight.get_point_position(i).y));
 
 	var leftArmPosition = sushiArmLeft.get_point_position((sushiArmLeft.get_point_count() - 1));
-	handLeft.position = leftArmPosition + Vector2((leftArmPosition.x + 80), -30);
-	handLeft.rotation_degrees = (leftArmPosition.x + 73) * 2;
+	handLeft.position = leftArmPosition + Vector2(leftArmPosition.x, 90);
+	handLeft.rotation_degrees = (leftArmPosition.x - sushiLeftArmXPos) * 2;
 
 	var rightArmPosition = sushiArmRight.get_point_position((sushiArmRight.get_point_count() - 1));
-	handRight.position = rightArmPosition +  Vector2((rightArmPosition.x - 80), -30);
-	handRight.rotation_degrees = (rightArmPosition.x - 73) * 2;
+	handRight.position = rightArmPosition +  Vector2(-47, 90);
+	handRight.rotation_degrees = (rightArmPosition.x - sushiRightArmXPos) * 2;
 
 	armWaveSpeed -= 1;
 

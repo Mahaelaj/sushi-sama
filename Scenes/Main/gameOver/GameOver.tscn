@@ -175,14 +175,14 @@ texture = ExtResource( 10 )
 [node name="LoadMainSceneTimer" type="Timer" parent="." index="8"]
 
 process_mode = 1
-wait_time = 0.5
+wait_time = 0.25
 one_shot = true
 autostart = false
 
 [node name="LoadMenuSceneTimer" type="Timer" parent="." index="9"]
 
 process_mode = 1
-wait_time = 0.5
+wait_time = 0.25
 one_shot = true
 autostart = false
 

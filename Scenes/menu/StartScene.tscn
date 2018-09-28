@@ -51,12 +51,14 @@ use_filter = true
 font_data = ExtResource( 7 )
 _sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
 
-[node name="StartScene" type="Node2D"]
+[node name="StartScene" type="Node2D" index="0"]
 
+scale = Vector2( 0.75, 0.75 )
 script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_horizontal_guides_": [ 440.0, 180.0 ],
-"_edit_vertical_guides_": [ 400.0, -110.0, 600.0 ]
+"_edit_vertical_guides_": [ 400.0, -110.0, 600.0, 460.0 ]
 }
 
 [node name="sky2" type="Sprite" parent="." index="0"]
@@ -79,7 +81,7 @@ _sections_unfolded = [ "Offset", "Transform" ]
 [node name="Sushi" type="KinematicBody2D" parent="." index="3"]
 
 pause_mode = 2
-position = Vector2( 115, 360 )
+position = Vector2( -120, 360 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -101,7 +103,7 @@ _sections_unfolded = [ "Border", "Capping", "Fill", "Material", "Transform", "Vi
 
 scale = Vector2( 0.0882489, 0.0882489 )
 texture = ExtResource( 5 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
 [node name="ArmLeftLine2D" type="Line2D" parent="Sushi" index="2"]
 
@@ -177,12 +179,11 @@ playback/speed = 1.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="6"]
 
-editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
-scale = Vector2( 1, 1 )
-transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scale = Vector2( 0.75, 0.75 )
+transform = Transform2D( 0.75, 0, 0, 0.75, 0, 0 )
 
 [node name="YourHighScoreText" type="Label" parent="CanvasLayer" index="0"]
 
@@ -190,10 +191,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -10.0
-margin_top = -50.0
-margin_right = 396.0
-margin_bottom = 11.0
+margin_left = 113.0
+margin_top = -33.0
+margin_right = 519.0
+margin_bottom = 28.0
 grow_horizontal = 0
 grow_vertical = 0
 rect_pivot_offset = Vector2( 0, 0 )
@@ -204,7 +205,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.145098, 0.203922, 0.168627, 1 )
-text = "Your High Score: 0"
+text = "High Score: 0"
 align = 1
 valign = 1
 percent_visible = 1.0
@@ -214,14 +215,15 @@ _sections_unfolded = [ "custom_colors", "custom_constants" ]
 
 [node name="AllTimeHighScoreText" type="Label" parent="CanvasLayer" index="1"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 430.0
-margin_top = 130.0
-margin_right = 765.0
-margin_bottom = 171.0
+margin_left = 447.0
+margin_top = 133.0
+margin_right = 782.0
+margin_bottom = 174.0
 grow_horizontal = 0
 grow_vertical = 0
 rect_pivot_offset = Vector2( 0, 0 )
@@ -408,8 +410,6 @@ area_mask = 1
 
 [node name="Buttons" type="Node2D" parent="." index="10"]
 
-editor/display_folded = true
-
 [node name="SettingsButton" type="TextureButton" parent="Buttons" index="0"]
 
 anchor_left = 0.0
@@ -491,7 +491,7 @@ _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 [node name="StartGameTimer" type="Timer" parent="." index="11"]
 
 process_mode = 1
-wait_time = 0.5
+wait_time = 0.25
 one_shot = true
 autostart = false
 

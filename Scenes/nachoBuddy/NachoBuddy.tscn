@@ -4,10 +4,12 @@
 [ext_resource path="res://Scenes/nachoBuddy/white.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/nachoBuddy/nacho-buddy.png" type="Texture" id=3]
 
-[node name="NachoBuddy" type="Node2D" index="0"]
+[node name="NachoBuddy" type="Node2D"]
 
 position = Vector2( 1, 0 )
+scale = Vector2( 0.75, 0.75 )
 script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
 __meta__ = {
 "_edit_vertical_guides_": [ 400.0 ]
 }
