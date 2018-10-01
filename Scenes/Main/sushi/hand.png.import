@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sushi-life.png-b30e9b218b962ee1d6b47c03daaf5b1f.stex"
+path="res://.import/hand.png-26db3f1c665787f4b70cbe7675c02377.stex"
 
 [deps]
 
-source_file="res://Scenes/Main/sushi-life.png"
-dest_files=[ "res://.import/sushi-life.png-b30e9b218b962ee1d6b47c03daaf5b1f.stex" ]
+source_file="res://Scenes/Main/sushi/hand.png"
+dest_files=[ "res://.import/hand.png-26db3f1c665787f4b70cbe7675c02377.stex" ]
 
 [params]
 

@@ -18,7 +18,7 @@ custom_solver_bias = 0.0
 radius = 45.4583
 height = 72.5665
 
-[node name="Sushi" type="KinematicBody2D" groups=[
+[node name="Sushi" type="KinematicBody2D" index="0" groups=[
 "sushi",
 ]]
 
@@ -91,6 +91,8 @@ scale = Vector2( 1.25, 1.25 )
 _sections_unfolded = [ "Pause", "Transform" ]
 
 [node name="PowerDown" parent="." index="7" instance=ExtResource( 5 )]
+
+[connection signal="tween_completed" from="ScaleTween" to="." method="_on_ScaleTween_tween_completed"]
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
 

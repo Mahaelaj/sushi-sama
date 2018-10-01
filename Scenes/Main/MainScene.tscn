@@ -299,7 +299,7 @@ position = Vector2( 400, 270 )
 scale = Vector2( 0.139697, 0.139697 )
 frames = SubResource( 5 )
 animation = "default"
-frame = 70
+frame = 37
 playing = true
 _sections_unfolded = [ "Pause" ]
 

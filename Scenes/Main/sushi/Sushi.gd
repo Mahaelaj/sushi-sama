@@ -2,9 +2,8 @@ extends KinematicBody2D
 
 var motion = Vector2();
 var startScale;
-var greenColor = Color(0.2, 1.0, 0.7, 0.8)
-var changingToGreen = false;
-var greenIndex = 0;
+var curScale;
+var armWaveSpeed = 0;
 
 const UP = Vector2(0, -1);
 const GRAVITY = 10;
@@ -14,8 +13,12 @@ signal gameOver(hit_floor);
 
 func _ready():
 	startScale = scale;
-	pass
-
+	curScale = scale;
+	#$Arm.global_position = position;
+	#for i in (range(0, 150)):
+	#	$Arm.add_point(Vector2(-225 - i, -160));
+	#pass
+	
 func _physics_process(delta):
 	motion.y += GRAVITY;
 	motion = move_and_slide(motion, UP);
@@ -28,23 +31,10 @@ func _physics_process(delta):
 	if (motion.y < 0 && rotation_degrees > - 15):
 		rotation_degrees -= delta * 2 * (rotation_degrees + 15);
 		
-func _process(delta):
-	
-	# the sushi color is changing to green after being eaten
-	if (changingToGreen):
-		if (greenIndex >= 1):
-			changingToGreen = false; 
-			return;
-			
-		$Sprite.set_modulate(Color(1,1,1,1).linear_interpolate(greenColor, greenIndex));
-		greenIndex += delta * 1.5;
-		
-	# the sushi color is changing back to the normal color after being turned green from being eaten
-	elif (!changingToGreen && greenIndex > 0):
-		$Sprite.set_modulate(Color(1,1,1,1).linear_interpolate(greenColor, greenIndex));
-		greenIndex -= delta * 1.5;
-	
 func bounce():
+	$ScaleTween.remove(self, "scale")
+	$ScaleTween.interpolate_property(self, "scale", scale, Vector2(curScale.x, curScale.y *.8), .25, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	$ScaleTween.start();
 	motion.y = -250;
 
 func _on_Area2D_area_entered(area):
@@ -64,8 +54,7 @@ func _on_Area2D_body_entered(body):
 func eatFood(body):
 	
 	# scale the sushi to be 5% bigger
-	$ScaleTween.interpolate_property(self, "scale", scale, scale + (startScale * .05), .5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-	$ScaleTween.start();
+	curScale = curScale + (startScale * .05);
 	
 	# remove the food
 	body.remove();
@@ -73,10 +62,11 @@ func eatFood(body):
 func eatSushi():
 	emit_signal('addPoints', 10, false);
 	$PowerDown.startShrink();
-	changingToGreen = true;
+	curScale = startScale;
 	
-	if (scale < startScale): return;
-	$ScaleTween.interpolate_property(self, "scale", scale, startScale, .5, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+	pass # replace with function body
+
+func _on_ScaleTween_tween_completed(object, key):
+	$ScaleTween.interpolate_property(self, "scale", scale, curScale, .25, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 	$ScaleTween.start();
-	
 	pass # replace with function body

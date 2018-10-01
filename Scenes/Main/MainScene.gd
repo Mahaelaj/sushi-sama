@@ -4,6 +4,7 @@ var points = 0;
 var displayPoints = 0;
 var time = 0;
 var gameOver = false;
+var armWaveSpeed = 0;
 
 func _ready():
 	if (playerData.musicOn): $AmbienceAudioStream2d.play(playerData.ambientNoisePos)
